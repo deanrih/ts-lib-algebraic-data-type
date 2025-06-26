@@ -1,0 +1,63 @@
+{
+	"name": "@deanrih/ts-lib-algebraic-data-type",
+	"version": "1.0.0",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"license": "MIT",
+	"homepage": "https://deanrih.id/projects/self/ts-lib-algebraic-data-type",
+	"description": "A helper library for Rust's Result and Option objects, utilizing and extending the `ts-results-es` package",
+	"readme": "./README.md",
+	"author": {
+		"name": "deanrih",
+		"url": "https://github.com/deanrih"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/deanrih/ts-lib-algebraic-data-type"
+	},
+	"bugs": {
+		"url": "https://github.com/deanrih/ts-lib-algebraic-data-type/issues"
+	},
+	"keywords": [
+		"ADT",
+		"Algebraic Data Type",
+		"Algebraic Data Type (ADT)",
+		"Result",
+		"Option",
+		"Err",
+		"Ok"
+	],
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "bun run --watch ./example/index.example.ts",
+		"case:dev": "bun run --watch ./example/case.example.ts",
+		"test": "bun test",
+		"build": "bun ./build.ts",
+		"release": "bun run test && bun run build && bun publish"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.5",
+		"@types/bun": "^1.2.17",
+		"tsup": "^8.5.0",
+		"typescript": "5.8.3"
+	},
+	"dependencies": {
+		"ts-results-es": "5.0.1"
+	}
+}
