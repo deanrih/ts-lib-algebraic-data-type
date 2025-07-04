@@ -52,8 +52,8 @@
 		"release": "bun run test && bun run build && bun publish"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.0.5",
-		"@types/bun": "^1.2.17",
+		"@biomejs/biome": "^2.0.6",
+		"@types/bun": "^1.2.18",
 		"tsup": "^8.5.0",
 		"typescript": "5.8.3"
 	},
